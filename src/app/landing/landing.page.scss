@@ -1,0 +1,12 @@
+.bg-image {
+    --background: url('/../assets/images/landing_background.jpg') no-repeat center center / cover;;    
+}
+
+.no-scroll .scroll-content {
+    overflow: hidden;
+}
+
+.btn-wrapper {
+    position: relative;
+    top: 50%;
+}
