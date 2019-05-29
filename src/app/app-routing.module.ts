@@ -7,7 +7,7 @@ const routes: Routes = [
 		loadChildren: './landing/landing.module#LandingPageModule'
 	},
 	{
-		path: 'home',
+		path: 'home/:branch',
 		loadChildren: './home/home.module#HomePageModule'
 	},
 	{

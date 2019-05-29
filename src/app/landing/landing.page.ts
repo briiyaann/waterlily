@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Storage } from '@ionic/storage';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-landing',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingPage implements OnInit {
 
-  constructor() { }
+  constructor(private storage: Storage, private route: Router) { }
 
   ngOnInit() {
+  }
+
+  navigateHome(branch) {
+    this.route.navigateByUrl('home/' + branch);
   }
 
 }
