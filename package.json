@@ -28,6 +28,7 @@
     "@ionic/storage": "^2.2.0",
     "cordova-sqlite-storage": "3.2.0",
     "core-js": "^2.5.4",
+    "onesignal-cordova-plugin": "2.4.7",
     "rxjs": "~6.5.1",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.29"
@@ -61,7 +62,8 @@
   "description": "An Ionic project",
   "cordova": {
     "plugins": {
-      "cordova-sqlite-storage": {}
+      "cordova-sqlite-storage": {},
+      "onesignal-cordova-plugin": {}
     }
   }
 }
