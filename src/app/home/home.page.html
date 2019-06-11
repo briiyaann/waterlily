@@ -13,11 +13,58 @@
 </ion-header>
 
 <ion-content *ngIf="branchName == 'maribago'">
-	this is maribago
+	<ion-row>
+		<ion-col size="12" no-padding style="max-height: 200px;">
+			<img style="height: 200px; width: 100%" src="/../assets/images/main_top_image.jpg" alt="">
+		</ion-col>
+	</ion-row>
+	<ion-row no-padding style="height: 120px;">
+		<ion-col size="6" no-padding routerLink="/dining">
+			<img style="height: 120px; width: 100%;" src="/../assets/images/1.jpg" alt="">
+			<span class="title-text">Dining</span>
+		</ion-col>
+		<ion-col size="6" no-padding routerLink="/accommodation">
+			<img style="height: 120px; width: 100%;" src="/../assets/images/2.jpg" alt="">
+			<span class="title-text">Accomodations</span>
+		</ion-col>
+	</ion-row>
+	<ion-row no-padding style="height: 120px;">
+		<ion-col size="6" no-padding>
+			<img style="height: 120px; width: 100%;" src="/../assets/images/3.jpg" alt="">
+			<span class="title-text">Virtual 360 tour</span>
+		</ion-col>
+		<ion-col size="6" no-padding>
+			<img style="height: 120px; width: 100%;" src="/../assets/images/4.jpg" alt="">
+			<span class="title-text">Latest Offers</span>
+		</ion-col>
+	</ion-row>
+	<ion-row no-padding style="height: 120px;">
+		<ion-col size="6" no-padding>
+			<img style="height: 120px; width: 100%;" src="/../assets/images/5.jpg" alt="">
+			<span class="title-text">Amenities</span>
+		</ion-col>
+		<ion-col size="6" no-padding>
+			<img style="height: 120px; width: 100%;" src="/../assets/images/6.jpg" alt="">
+			<span class="title-text">Contact Us</span>
+		</ion-col>
+	</ion-row>
 </ion-content>
 <ion-content *ngIf="branchName == 'sumilon'">
-	this is sumilon
+	<ion-row>
+		<ion-col size="12" no-padding>
+			<img style="width: 100%" src="/../assets/images/main_top_image.jpg" alt="">
+		</ion-col>
+	</ion-row>
 </ion-content>
 <ion-content *ngIf="branchName == 'panglao'">
-	this is panglao
+	<ion-row>
+		<ion-col size="12" no-padding>
+			<img style="width: 100%" src="/../assets/images/main_top_image.jpg" alt="">
+		</ion-col>
+	</ion-row>
 </ion-content>
+<ion-footer>
+	<ion-toolbar color="primary">
+		<ion-button expand="full" fill="clear" color="light" style="font-weight: 600">Book Now</ion-button>
+	</ion-toolbar>
+</ion-footer>
