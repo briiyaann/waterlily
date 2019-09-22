@@ -1,13 +1,39 @@
-<ion-content class="bg-image no-scroll" padding>
-	<ion-row padding class="btn-wrapper">
-		<ion-col size="12">
-			<ion-button expand="block" (click)="navigateHome('maribago')">BLUEWATER MARIBAGO</ion-button>
-		</ion-col>
-		<ion-col size="12">
-			<ion-button expand="block" (click)="navigateHome('panglao')">BLUEWATER PANGLAO</ion-button>
-		</ion-col>
-		<ion-col size="12">
-			<ion-button expand="block" (click)="navigateHome('sumilon')">BLUEWATER SUMILON</ion-button>
-		</ion-col>
-	</ion-row>
+<ion-content class="bg-image">
+	<form [formGroup]="loginForm" class="login100-form validate-form log-form">
+		<!-- <span class="login100-form-title p-b-26">
+			<img src="/assets/images/mandala_logo.svg" alt="">
+		</span> -->
+		<ion-input formControlName="insecure" type="hidden" value="cool"></ion-input>
+		<ion-grid>
+			<ion-row justify-content-center>
+				<ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+					<div class="error-inline" *ngIf="loginError">
+							{{loginError}}
+						</div>
+					<div padding>
+							<ion-item no-padding>
+									<ion-label position="floating">Email</ion-label>
+									<ion-input formControlName="email" class="input-field-transparent" type="email" [class.invalid]="!loginForm.controls.email.valid && loginForm.controls.email.dirty"></ion-input>
+								</ion-item>
+								<div class="error-inline" no-padding *ngIf="!loginForm.controls.email.valid && loginForm.controls.email.dirty">
+									<p style="color: #EA4335;position: relative;top: 0">Please enter a valid email address.</p>
+								</div>
+								<ion-item no-padding class="m-t-15">
+									<ion-label position="floating">Password</ion-label>
+									<ion-input formControlName="password" [type]="passwordType" class="has-password input-field-transparent"></ion-input>
+									<!-- <ion-icon [name]="iconDisplay" color="medium" class="btn-show-pass" item-end (click)="togglePass()"></ion-icon> -->
+								</ion-item>
+								<div class="error-inline" no-padding *ngIf="!loginForm.controls.password.valid && loginForm.controls.password.dirty">
+									<p style="color: #EA4335;position: relative;top: 0">Please enter a password</p>
+								</div>
+					</div>
+		
+					<div padding>
+							<ion-button expand="block" color="light" class="btn-round" (click)="login()" [disabled]="loginForm.invalid">Login</ion-button>
+							<p style="text-align: center">Not Registered? <a routerLink="/register">Register now.</a></p>
+					</div>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</form>
 </ion-content>
