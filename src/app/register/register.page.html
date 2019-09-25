@@ -1,0 +1,42 @@
+<ion-content class="bg-image">
+	<form [formGroup]="registerForm" class="login100-form validate-form log-form">
+		<ion-input formControlName="insecure" type="hidden" value="cool"></ion-input>
+		<ion-grid>
+			<ion-row justify-content-center>
+				<ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+					<div class="error-inline" *ngIf="regError">
+							{{regError}}
+						</div>
+					<div padding>
+							<ion-item no-padding>
+									<ion-label position="floating">Email</ion-label>
+									<ion-input formControlName="email" class="input-field-transparent" type="email" [class.invalid]="!registerForm.controls.email.valid && registerForm.controls.email.dirty"></ion-input>
+								</ion-item>
+								<div class="error-inline" no-padding *ngIf="!registerForm.controls.email.valid && registerForm.controls.email.dirty">
+									<p style="color: #EA4335;position: relative;top: 0">Please enter a valid email address.</p>
+                </div>
+                <ion-item no-padding class="m-t-15">
+									<ion-label position="floating">Username</ion-label>
+									<ion-input formControlName="username" type="text" class=" input-field-transparent"></ion-input>
+								</ion-item>
+								<div class="error-inline" no-padding *ngIf="!registerForm.controls.username.valid && registerForm.controls.username.dirty">
+									<p style="color: #EA4335;position: relative;top: 0">Please enter a username</p>
+								</div>
+								<ion-item no-padding class="m-t-15">
+									<ion-label position="floating">Password</ion-label>
+									<ion-input formControlName="user_pass" type="password" class="has-password input-field-transparent"></ion-input>
+								</ion-item>
+								<div class="error-inline" no-padding *ngIf="!registerForm.controls.user_pass.valid && registerForm.controls.user_pass.dirty">
+									<p style="color: #EA4335;position: relative;top: 0">Please enter a password</p>
+								</div>
+					</div>
+		
+					<div padding>
+							<ion-button expand="block" color="light" class="btn-round" (click)="register()" [disabled]="registerForm.invalid">Register</ion-button>
+							<p style="text-align: center">Already Registered? <a routerLink="/">Login now.</a></p>
+					</div>
+				</ion-col>
+			</ion-row>
+		</ion-grid>
+	</form>
+</ion-content>
