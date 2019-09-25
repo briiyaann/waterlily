@@ -11,7 +11,19 @@
   text-align: center;
   transform: translateX(-50%) translateY(-50%);
   color: #fff;
-  font-weight: 600;
-  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: bold;
   text-transform: uppercase;
-}
+  background-color: rgba(0,0,0,0.65);
+  padding-top: 45px;
+  height: 138px;
+  border-left: solid 1px white;
+  border-bottom: solid 1px white;
+  span {
+    display: block;
+    text-align: center;
+  }
+}.no-border {
+  border-left: none;
+ }
+
